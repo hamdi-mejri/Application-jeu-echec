@@ -31,7 +31,8 @@ class Game:
         pygame.display.set_caption(window_title)
 
         # get location of game icon
-        icon_src = os.path.join(self.resources, "/home/hamdi/Application-jeu-echec/res/chess_icon.png")
+    #    icon_src = os.path.join(self.resources, "/home/hamdi/Application-jeu-echec/res/chess_icon.png")
+        icon_src = os.path.join("res", "chess_icon.png")
         # load game icon
         icon = pygame.image.load(icon_src)
         # set game icon
@@ -50,7 +51,8 @@ class Game:
         self.board_dimensions = (self.board_offset_x, self.board_offset_y)
         
         # get location of chess board image
-        board_src = os.path.join(self.resources, "/home/hamdi/Application-jeu-echec/res/board.png")
+        # board_src = os.path.join(self.resources, "/home/hamdi/Application-jeu-echec/res/board.png")
+        board_src = os.path.join("res", "board.png")
         # load the chess board image
         self.board_img = pygame.image.load(board_src).convert()
 
@@ -68,7 +70,8 @@ class Game:
                                                 self.board_offset_y+(y*square_length)])
 
         # get location of image containing the chess pieces
-        pieces_src = os.path.join(self.resources, "/home/hamdi/Application-jeu-echec/res/pieces.png")
+        #pieces_src = os.path.join(self.resources, "/home/hamdi/Application-jeu-echec/res/pieces.png")
+        pieces_src = os.path.join("res", "pieces.png")
         # create class object that handles the gameplay logic
         self.chess = Chess(self.screen, pieces_src, self.board_locations, square_length)
 
